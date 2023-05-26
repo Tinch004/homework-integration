@@ -1,0 +1,49 @@
+.barra {
+  background-color: green;
+  padding: 18px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  outline: none;
+  padding-left: 10px;
+  transition: box-shadow 0.8s ease;
+  height: 40px; /* Ajusta la altura según tus necesidades */
+}
+
+.search:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.boton,
+.homeButton,
+.aboutButton,
+.favoriteButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+  height: 40px; /* Ajusta la altura según tus necesidades */
+}
+
+.boton:hover,
+.homeButton:hover,
+.aboutButton:hover,
+.favoriteButton:hover {
+  background-color: #155a18;
+}
