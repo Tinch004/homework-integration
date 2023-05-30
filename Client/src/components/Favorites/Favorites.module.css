@@ -4,4 +4,21 @@
     justify-content: space-between;
     align-items: center;
     height: fit-content;
+  
+  }
+
+  .selector {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4caf50;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mi-selector:hover {
+    background-color: #155a18;
   }

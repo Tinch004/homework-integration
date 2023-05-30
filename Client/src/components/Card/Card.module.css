@@ -81,7 +81,10 @@ height: auto;
 .close:hover{
   text-shadow: 0 0 10px #ff5858, 0 0 20px #ff5858, 0 0 30px #ff5858;;
 }
-
+ .botonfavorito{
+  background: none;
+  border: none;
+ }
 
 
 

@@ -1,5 +1,5 @@
 import style from './Card.module.css'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { addFav, removeFav } from '../../redux/actions';
 import {connect} from 'react-redux'
 import { useState, useEffect } from 'react';
@@ -31,9 +31,9 @@ function Card({ id, name, status, species, gender, origin, image, onClose, myFav
       <div className={style.card}>
       {
    isFav ? (
-      <button onClick={handleFavorite}>❤️</button>
+      <button className={style.botonfavorito} onClick={handleFavorite}>❤️</button>
    ) : (
-      <button onClick={handleFavorite}>🤍</button>
+      <button className={style.botonfavorito} onClick={handleFavorite}>🤍</button>
    )
 }
         <NavLink to={`/detail/${id}`}>
@@ -47,7 +47,8 @@ function Card({ id, name, status, species, gender, origin, image, onClose, myFav
         <p>{species}</p>
         <p>{gender}</p>
         <p>{origin}</p>
-        <button
+        
+          <button
           className={style.close}
           onClick={() => {
             onClose(id);
