@@ -8,16 +8,11 @@ const reducer = (state = initialState, action) => {
     case "ADD_FAV":
       return {
         ...state,
-        myFavorites: [...state.allCharacters, action.payload],
-        allCharacters: [...state.allCharacters, action.payload],
+        myFavorites: action.payload,
+        allCharacters: action.payload,
       };
     case "REMOVE_FAV":
-      return {
-        ...state,
-        myFavorites: state.myFavorites.filter(
-          (pepito) => pepito.id !== Number(action.payload)
-        ),
-      };
+      return { ...state, myFavorites: action.payload };
     case "FILTER":
       return {
         ...state,
@@ -30,8 +25,8 @@ const reducer = (state = initialState, action) => {
         ...state,
         myFavorites:
           action.payload === "A"
-          ? state.allCharacters.sort((a, b) => a.id - b.id)
-          : state.allCharacters.sort((a, b) => b.id - a.id),
+            ? state.allCharacters.sort((a, b) => a.id - b.id)
+            : state.allCharacters.sort((a, b) => b.id - a.id),
       };
 
     default:
